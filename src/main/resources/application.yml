@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    productCatalog:
+      path: /products/**
+      sensitiveHeaders:  ''
+    pricingCatalog:
+      path: /prices/**
+      sensitiveHeaders:  ''
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:9000/eureka/
+
+proxy:
+  auth:
+    routes:
+      productCatalog: passthru
+      pricingCatalog: passthru

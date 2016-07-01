@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GlobMart Products</title>
+    <h1>Hello World !</h1>
+</head>
+<body>
+<h3>Products</h3>
+<div class="list-group" ng-repeat="product in products">
+    <a href="/#/prices/{{product.productName}}" class="list-group-item">
+        <h4 class="list-group-item-heading">{{product.productName}}</h4>
+        <p class="list-group-item-text">{{product.productBrand}}<br/>>{{product.productType}}</p>
+    </a>
+</div>
+</body>
+</html>
