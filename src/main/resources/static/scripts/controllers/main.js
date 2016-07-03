@@ -19,6 +19,6 @@ angular.module('globMartApp')
       }).then(function (response) {
     	  $scope.prices = response.data;
       }, function(response) {
-    	  console.error('Error requesting participants.')
+    	  console.error('Error requesting prices.')
       });
   });
